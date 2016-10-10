@@ -8,7 +8,7 @@ import './index.css';
 
 const store = configureStore();
 
-persistStore(store);
+// persistStore(store);
 
 const Wrapper = () => {
   return (

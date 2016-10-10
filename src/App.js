@@ -13,7 +13,7 @@ class App extends Component {
           <h2>Counter</h2>
         </div>
         <p className="App-intro">
-          { counter.count }
+          { counter.get('count') }
         </p>
         <button onClick={actions.addCount} > Add </button>
       </div>

@@ -1,16 +1,15 @@
+import Immutable from 'immutable';
+
 import { ADD_COUNT } from '../actions/counter';
 
-const initialState = {
+const initialState = Immutable.fromJS({
   count: 0,
-}
+});
 
 export default function counter(state = initialState, action = {}) {
   switch (action.type) {
     case ADD_COUNT: {
-      return {
-        ...state,
-        count: state.count + 1,
-      }
+      return state.set('count', state.get('count') + 1);
     }
     default:
       return state;
